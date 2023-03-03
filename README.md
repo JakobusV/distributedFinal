@@ -1,5 +1,5 @@
 ## Final Project for CSC380 "Distributed Systems"
----
+
 ### About this project
 
 In the last two weeks of class CSC380 at <a href="https://neumont.edu/">Neumont</a>. All students are required to build a project that includes:
