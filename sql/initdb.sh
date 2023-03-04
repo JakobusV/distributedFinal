@@ -1,0 +1,1 @@
+psql dockerDB < /etc/postgresql/data/demoDump.sql 1> /dev/null

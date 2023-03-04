@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  postgresql:
+    build:
+      context: ./sql
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: dockerDB
+      POSTGRES_PASSWORD: admin
+
+networks:
+  default:
+    name: customNetwork
+    ipam:
+      config:
+        - subnet: "172.22.0.0/24"
