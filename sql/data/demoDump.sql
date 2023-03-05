@@ -109,9 +109,9 @@ ALTER TABLE ONLY public.songs ALTER COLUMN song_id SET DEFAULT nextval('public.s
 --
 
 COPY public.playlists (playlist_id, title, created_date, details, image_url) FROM stdin;
-1	"Classics Mix #1"	2023-01-25 10:31:49.601827	"Great for a karaoke night!"	"https://upload.wikimedia.org/wikipedia/commons/2/29/Funky_Stuff_mixtape.jpg"
-2	"Jakob's study playlist"	2022-11-13 10:31:49.601827	"Time to get working."	"https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-3	"Reggae favorites"	2022-07-12 10:31:49.601827	"Kick back and relax"	"https://i1.sndcdn.com/artworks-dRyfhz4WEjfnuYjD-9ssOXw-t500x500.jpg"
+1	Classics Mix #1	2023-01-25 10:31:49.601827	Great for a karaoke night!	https://upload.wikimedia.org/wikipedia/commons/2/29/Funky_Stuff_mixtape.jpg
+2	Jakob\'s study playlist	2022-11-13 10:31:49.601827	Time to get working.	https://images.pexels.com/photos/1629212/pexels-photo-1629212.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
+3	Reggae favorites	2022-07-12 10:31:49.601827	Kick back and relax	https://i1.sndcdn.com/artworks-dRyfhz4WEjfnuYjD-9ssOXw-t500x500.jpg
 \.
 
 
@@ -120,26 +120,26 @@ COPY public.playlists (playlist_id, title, created_date, details, image_url) FRO
 --
 
 COPY public.songs (song_id, title, artist, album, duration) FROM stdin;
-1	"Minute by Minute"	"The Doobie Brothers"	"Minute by Minute"	207
-2	"If I Saw You Again"	"Pages"	"Pages"	205
-3	"The Promise"	"When In Rome"	"When In Rome"	221
-4	"Catch The Rainbow"	"Rainbow"	"Ritchie Blackmore's Rainbow"	396
-5	"Shout"	"Tears For Fears"	"Songs From The Big Chair"	394
-6	"Kiss on My List"	"Daryl Hall & John Oates"	"Voices"	265
-7	"Vacuum"	"Gang Gang Dance"	"Saint Dymphna"	253
-8	"Touched"	"my bloody valentine"	"Loveless"	57
-9	"Press A Key"	"Plone"	"For Beginner Piano"	245
-10	"Pulsewidth"	"Aphex Twin"	"Selected Ambient Works 85-92"	228
-11	"Foil"	"Autechre"	"Amber"	365
-12	"Introspection - Edit"	"Laraaji"	"Introspection (Edit)"	155
-13	"dlp 1.3"	"William Basinski"	"The Disintegration Loops IV (Remastered)"	718
-14	"I Shot The Sheriff"	"The Wailers"	"Burnin' (Deluxe Edition)"	280
-15	"Concrete Jungle"	"Bob Marley & The Wailers"	"Catch A Fire"	254
-16	"Your House"	"Steel Pulse"	"True Democracy"	223
-17	"Under Mi Sensi"	"Barrington Levy"	"Too Experienced - The Best of Barrington Levy"	251
-18	"Zungguzungguguzungguzeng"	"Yellowman"	"Zungguzungguguzungguzeng!"	388
-19	"Dub Fire"	"Aswad"	"New Chapter Of Dub"	270
-20	"Time Tough"	"Toots & The Maytals"	"Funky Kingston"	264
+1	Minute by Minute	The Doobie Brothers	Minute by Minute	207
+2	If I Saw You Again	Pages	Pages	205
+3	The Promise	When In Rome	When In Rome	221
+4	Catch The Rainbow	Rainbow	Ritchie Blackmore\'s Rainbow	396
+5	Shout	Tears For Fears	Songs From The Big Chair	394
+6	Kiss on My List	Daryl Hall & John Oates	Voices	265
+7	Vacuum	Gang Gang Dance	Saint Dymphna	253
+8	Touched	my bloody valentine	Loveless	57
+9	Press A Key	Plone	For Beginner Piano	245
+10	Pulsewidth	Aphex Twin	Selected Ambient Works 85-92	228
+11	Foil	Autechre	Amber	365
+12	Introspection - Edit	Laraaji	Introspection (Edit)	155
+13	dlp 1.3	William Basinski	The Disintegration Loops IV (Remastered)	718
+14	I Shot The Sheriff	The Wailers	Burnin\' (Deluxe Edition)	280
+15	Concrete Jungle	Bob Marley & The Wailers	Catch A Fire	254
+16	Your House	Steel Pulse	True Democracy	223
+17	Under Mi Sensi	Barrington Levy	Too Experienced - The Best of Barrington Levy	251
+18	Zungguzungguguzungguzeng	Yellowman	Zungguzungguguzungguzeng!	388
+19	Dub Fire	Aswad	New Chapter Of Dub	270
+20	Time Tough	Toots & The Maytals	Funky Kingston	264
 \.
 
 

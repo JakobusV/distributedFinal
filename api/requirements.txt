@@ -1,0 +1,7 @@
+fastapi>=latest
+pydantic>=latest
+sqlalchemy>=latest
+uvicorn>=latest
+psycopg2>=latest
+confluent-kafka>=latest
+prometheus-fastapi-instrumentator>=latest

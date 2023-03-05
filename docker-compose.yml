@@ -4,10 +4,24 @@ services:
     build:
       context: ./sql
     ports:
-      - '5432:5432'
+      - '6543:5432'
     environment:
       POSTGRES_DB: dockerDB
       POSTGRES_PASSWORD: admin
+  fastapi1:
+    build:
+      context: ./api
+    ports:
+      - '8001:8000'
+    depends_on:
+      - postgresql
+  fastapi2:
+    build:
+      context: ./api
+    ports:
+      - '8002:8000'
+    depends_on:
+      - postgresql
 
 networks:
   default:
