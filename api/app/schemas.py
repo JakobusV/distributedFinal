@@ -35,3 +35,7 @@ class Connection(BaseConnection):
     connection_id: int
     class Config:
         orm_mode = True
+class MetaConnection(BaseConnection):
+    connection_id: int
+    playlist: str
+    song: str

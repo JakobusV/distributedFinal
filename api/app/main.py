@@ -1,4 +1,4 @@
-from fastapi import Depends, FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException, APIRouter
 from sqlalchemy.orm import Session
 import app.crud as crud
 import app.models as models
@@ -7,6 +7,7 @@ from app.database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
 
+main = FastAPI()
 app = FastAPI()
 
 def get_db():
@@ -70,13 +71,13 @@ def remove_song(song_id: int):
     pass
 
 
-@app.get("/connections", response_model=list[schemas.Connection])
+@app.get("/connections", response_model=list[schemas.MetaConnection])
 def read_connections(playlist_id: int = 0, song_id: int = 0, db: Session = Depends(get_db)):
     db_connections = crud.read_connections(db, playlist_id=playlist_id, song_id=song_id)
     if len(db_connections) < 0:
         raise HTTPException(status_code=404, detail="No connections found")
     return db_connections
-@app.get("/connections/{connection_id}", response_model=schemas.Connection)
+@app.get("/connections/{connection_id}", response_model=schemas.MetaConnection)
 def read_connection(connection_id: int, db: Session = Depends(get_db)):
     db_connection = crud.read_connection(db, connection_id=connection_id)
     if db_connection == None:
@@ -92,3 +93,5 @@ def remove_connection(connection_id: int):
     db_connection = read_connection(connection_id)
     # send delete to stream
     pass
+
+main.mount("/api/v1", app)
