@@ -8,13 +8,13 @@ def read_playlists(db: Session) -> list[schemas.Playlist]:
     return db.query(models.Playlist).all()
 
 def read_playlist(db: Session, playlist_id: int) -> schemas.Playlist:
-    return db.query(models.Playlist).filter(models.Playlist.id == playlist_id).first()
+    return db.query(models.Playlist).filter(models.Playlist.playlist_id == playlist_id).first()
 
 def read_songs(db: Session) -> list[schemas.Song]:
     return db.query(models.Song).all()
 
 def read_song(db: Session, song_id: int) -> schemas.Song:
-    return db.query(models.Song).filter(models.Song.id == song_id).first()
+    return db.query(models.Song).filter(models.Song.song_id == song_id).first()
 
 def read_connections(db: Session, playlist_id: int, song_id: int) -> list[schemas.MetaConnection]:
     filters = []

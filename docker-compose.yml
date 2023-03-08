@@ -22,6 +22,14 @@ services:
       - '8002:8000'
     depends_on:
       - postgresql
+  nginx:
+    build:
+      context: ./nginx
+    ports:
+      - '80:80'
+    depends_on:
+      - fastapi1
+      - fastapi2
 
 networks:
   default:
