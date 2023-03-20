@@ -39,7 +39,7 @@ def update_song(song_id: int, song: schemas.SongCreate, db: Session = Depends(ge
     # send patch message to stream
     data = {
         "table": table,
-        "action": "patch",
+        "action": "update",
         "data": {
                 "song_id": song_id,
                 "song": jsonable_encoder(song)

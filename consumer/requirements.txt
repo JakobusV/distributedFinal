@@ -1,0 +1,3 @@
+confluent_kafka>=latest
+sqlalchemy>=latest
+psycopg2>=latest

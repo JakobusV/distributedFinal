@@ -174,9 +174,9 @@ COPY public.connections (connection_id, playlist_id, song_id) FROM stdin;
 -- Name: offerlogs_offerlog_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.playlists_playlist_id_seq', 1, false);
-SELECT pg_catalog.setval('public.songs_song_id_seq', 1, false);
-SELECT pg_catalog.setval('public.connections_connection_id_seq', 1, false);
+SELECT pg_catalog.setval('public.playlists_playlist_id_seq', 4, false);
+SELECT pg_catalog.setval('public.songs_song_id_seq', 21, false);
+SELECT pg_catalog.setval('public.connections_connection_id_seq', 21, false);
 
 
 --

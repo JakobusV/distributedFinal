@@ -39,7 +39,7 @@ def update_playlist(playlist_id: int, playlist: schemas.PlaylistCreate, db: Sess
     # send patch message to stream
     data = {
         "table": table,
-        "action": "patch",
+        "action": "update",
         "data": {
                 "playlist_id": playlist_id,
                 "playlist": jsonable_encoder(playlist)
