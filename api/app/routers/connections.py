@@ -9,6 +9,7 @@ from .. import crud, schemas
 
 table = "connections"
 router = APIRouter(
+    tags = [table],
     prefix="/connections",
 )
 

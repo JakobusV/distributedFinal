@@ -15,5 +15,5 @@ This project is the final result of that assignment! For the topic of my resourc
     - <a href="https://fastapi.tiangolo.com/">FastAPI</a>
 - PostgreSQL (SQL database)
 - Kafka (Event stream)
-- Prometheus & Grafana (Data scrape and visualization)
+- Prometheus (Data scrape and visualization)
 - Nginx (Load balancer)

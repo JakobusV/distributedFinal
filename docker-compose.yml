@@ -60,6 +60,15 @@ services:
       context: ./consumer
     depends_on:
       - nginx
+  prometheus:
+    image: 'prom/prometheus:latest'
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus:/etc/prometheus
+    depends_on:
+      - nginx
+      - broker
 
 networks:
   default:

@@ -7,6 +7,7 @@ from .. import crud, schemas
 
 table = "songs"
 router = APIRouter(
+    tags = [table],
     prefix="/songs",
 )
 
